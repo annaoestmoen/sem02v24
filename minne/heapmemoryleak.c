@@ -1,9 +1,9 @@
 #include <stdlib.h>
 
-int main() {
-    while (1) {
-        int *ptr = malloc(sizeof(int)); // Aldri frigjort, forårsaker minnelekkasje
-        // Gjør noe med ptr...
+int main(void) {
+    while(1) {
+        // Allokerer 1 MB av plass i heap for hvert iterasjon
+        int *ptr = (int *) malloc(1024 * 1024);
     }
     return 0;
 }
